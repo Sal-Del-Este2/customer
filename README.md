@@ -59,3 +59,6 @@ Artifact: ms-customer-bff
 Name: ms-customer-bff
 Description: Demo Project for Spring Boot
 Package name: cl.duoc.ms-customer-bff
+
+<H1> Error </H1>
+si presenta error en el front por no poder reconocer los usuarios agregados, creados o enlistar los existentes, ejecutar en ms-customer-bff lo sigiente sin comillas "./gradlew clean build"
