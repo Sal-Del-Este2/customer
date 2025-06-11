@@ -1,4 +1,4 @@
-Base de datos
+<H1>Base de datos</H1>
 
 1) Crear base de datos en MySql
 
@@ -24,7 +24,8 @@ VALUES
 4) validar
 Select * from customer;
 
-crear los 3 micros servicios
+
+<H1>crear los 3 micros servicios</H1>
 
 en Spring Initializr, esta pagina https://start.spring.io/ se creo lo siguiente
 Project: Gradle-Groovy
