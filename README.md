@@ -1,6 +1,6 @@
 <H1>Se incluyo</H1>
-pruebas post, pul y delete de Postman
-la base de datos para importar
+Pruebas Post, Get y Del de Postman
+La base de datos para importar
 
 <H1>Base de datos</H1>
 
