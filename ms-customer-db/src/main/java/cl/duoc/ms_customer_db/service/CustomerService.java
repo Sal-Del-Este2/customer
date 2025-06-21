@@ -15,6 +15,7 @@ public class CustomerService {
     public List<Customer> selectAllCustomer(){
         List<Customer> listaCustomers = customerRepository.findAll();
         return listaCustomers;
+        // return customerRepository.findAll();
     }
 
     // metodo para agregar cliente

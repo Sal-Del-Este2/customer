@@ -102,7 +102,7 @@
       <div>
         <!-- ver a los clientes activos -->
         <h2>Ver todos los clientes</h2>
-        <button onclick="getAllCustomers()">Ver Clientes</button>
+        <button onclick="getAllCustomer()">Ver Clientes</button>
         <table border="1" id="customerTable">
           <thead>
             <tr>
@@ -161,9 +161,9 @@
 
 
     <script>
-      const baseUrl = 'http://localhost:8282/customers';
+      const baseUrl = 'http://localhost:8282/customer';
 
-      function getAllCustomers() {
+      function getAllCustomer() {
         fetch(baseUrl)
         .then(response => response.json())
         .then(data => {
@@ -190,13 +190,13 @@
       }
 
       // función para poblar el select con los IDs existentes
-      function populateDeleteSelect(customers) {
+      function populateDeleteSelect(customer) {
         const deleteSelect = document.getElementById('deleteIdSelect');
         const updateSelect = document.getElementById('updateIdSelect');
         deleteSelect.innerHTML = '<option value="">Seleccione un cliente</option>';
         updateSelect.innerHTML = '<option value="">Seleccione un cliente</option>';
 
-        customers.forEach(c => {
+        customer.forEach(c => {
           const option1 = document.createElement('option');
           option1.value = c.id;
           option1.textContent = `ID ${c.id} - ${c.username}`;
@@ -222,7 +222,7 @@
           .then(response => response.json())
           .then(data => {
             alert('Cliente creado con ID: ' + data.id);
-            getAllCustomers();
+            getAllCustomer();
           })
           .catch(error => alert('Error al crear cliente: ' + error));
       });
@@ -242,7 +242,7 @@
           .then(response => {
             if (response.ok) {
               alert('Cliente actualizado');
-              getAllCustomers();
+              getAllCustomer();
             } else {
               alert('Error: cliente no encontrado');
             }
@@ -260,7 +260,7 @@
           .then(response => {
             if (response.status === 200)  {
               alert('Cliente ' + id + ' eliminado');
-              getAllCustomers();
+              getAllCustomer();
             } else {
               alert('cliente no encontrado');
             }

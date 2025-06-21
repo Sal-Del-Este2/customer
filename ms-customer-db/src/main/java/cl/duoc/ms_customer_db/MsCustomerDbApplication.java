@@ -12,4 +12,4 @@ public class MsCustomerDbApplication {
 	
 }
 
-// http://localhost:8080/customers
+// http://localhost:8080/customer

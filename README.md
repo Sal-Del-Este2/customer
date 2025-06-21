@@ -55,3 +55,10 @@ Artifact: ms-customer-bff
 Name: ms-customer-bff
 Description: Demo Project for Spring Boot
 Package name: cl.duoc.ms-customer-bff
+
+<H1>Error</H1>
+se presento el error "Error al obtener clientes: TypeError: Failed to fetch"
+
+se levanto el index.html con live server
+Se resolvio agregardo la anotación @CrossOrigin en el controller
+@CrossOrigin(origins = {"http://127.0.0.1:5500", "http://localhost:5500"})

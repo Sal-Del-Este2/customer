@@ -9,19 +9,21 @@ import cl.duoc.ms_customer_bff.model.dto.CustomerDTO;
 import org.springframework.web.bind.annotation.*;
 
 // @RequestMapping("/customers")
-@FeignClient(name = "ms-customer-bs", url = "http://localhost:8181/")
-public interface CustomerDbFeignClient {
+@FeignClient(
+    name = "ms-customer-bs",
+    url = "http://localhost:8181/")
+    public interface CustomerDbFeignClient {
 
-    @GetMapping("/customers")
+    @GetMapping("/customer")
     public List<CustomerDTO> selectAllCustomer();
 
-    @PostMapping("/customers")
+    @PostMapping("/customer")
     CustomerDTO createCustomer(@RequestBody CustomerDTO customer);
 
-    @PutMapping("/customers/{id}")
+    @PutMapping("/customer/{id}")
     CustomerDTO updateCustomer(@PathVariable Long id, @RequestBody CustomerDTO customer);
 
-    @DeleteMapping("/customers/{id}")
+    @DeleteMapping("/customer/{id}")
     void deleteCustomer(@PathVariable Long id);
     
 }

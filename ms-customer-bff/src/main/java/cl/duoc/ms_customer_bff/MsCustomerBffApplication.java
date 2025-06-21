@@ -14,7 +14,7 @@ public class MsCustomerBffApplication {
 
 }
 
-// http://localhost:8282/customers
+// http://localhost:8282/customer
 
 //./gradlew clean build
 // ./gradlew bootRun

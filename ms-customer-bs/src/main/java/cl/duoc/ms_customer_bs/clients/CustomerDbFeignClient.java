@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(name = "ms-customer-db", url = "http://localhost:8080")
 public interface CustomerDbFeignClient {
 
-    @GetMapping("/customers")
+    @GetMapping("/customer")
     public List<CustomerDTO> selectAllCustomer();
 
-    @PostMapping("/customers")
+    @PostMapping("/customer")
     CustomerDTO createCustomer(@RequestBody CustomerDTO customer);
 
-    @PutMapping("/customers/{id}")
+    @PutMapping("/customer/{id}")
     CustomerDTO updateCustomer(@PathVariable Long id, @RequestBody CustomerDTO customer);
 
-    @DeleteMapping("/customers/{id}")
+    @DeleteMapping("/customer/{id}")
     void deleteCustomer(@PathVariable Long id);
 
 }

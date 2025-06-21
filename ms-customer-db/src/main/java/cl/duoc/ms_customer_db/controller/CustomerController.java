@@ -30,20 +30,20 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-    @GetMapping("/customers")
+    @GetMapping("/customer")
     public List<Customer> selectAllCustomer() {
         return customerService.selectAllCustomer();
     }
 
     // crear un cliente
-    @PostMapping("/customers")
+    @PostMapping("/customer")
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
         Customer savedCustomer = customerService.saveCustomer(customer);
         return new ResponseEntity<>(savedCustomer, HttpStatus.CREATED);
     }
 
     //modificar un usuario
-    @PutMapping("/customers/{id}")
+    @PutMapping("/customer/{id}")
     public ResponseEntity<Customer> updateCustomer(@PathVariable("id") Long id, @RequestBody Customer customer) {
         Customer updatedCustomer = customerService.updateCustomer(id, customer);
         if(updatedCustomer == null){
@@ -53,7 +53,7 @@ public class CustomerController {
     }
 
     // eliminar cliente
-    @DeleteMapping("/customers/{id}")
+    @DeleteMapping("/customer/{id}")
     public ResponseEntity<Void> deleteCustomer(@PathVariable("id") Long id) {
         boolean deleted = customerService.deleteCustomer(id);
         if (deleted) {

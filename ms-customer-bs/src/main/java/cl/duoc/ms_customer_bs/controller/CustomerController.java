@@ -17,22 +17,22 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
     
-    @GetMapping("/customers")
+    @GetMapping("/customer")
     public List<CustomerDTO> selectAllCustomer(){
         return customerService.selectAllCustomer();
     }
 
-    @PostMapping("/customers")
+    @PostMapping("/customer")
     public CustomerDTO createCustomer(@RequestBody CustomerDTO customer) {
         return customerService.createCustomer(customer);
     }
 
-    @PutMapping("/customers/{id}")
+    @PutMapping("/customer/{id}")
     public CustomerDTO updateCustomer(@PathVariable Long id, @RequestBody CustomerDTO customer) {
         return customerService.updateCustomer(id, customer);
     }
 
-    @DeleteMapping("/customers/{id}")
+    @DeleteMapping("/customer/{id}")
     public void deleteCustomer(@PathVariable Long id) {
         customerService.deleteCustomer(id);
     }
